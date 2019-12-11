@@ -1,0 +1,25 @@
+{
+  "name": "hw11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-lowe/11-Fitness-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adam-lowe/11-Fitness-Tracker/issues"
+  },
+  "homepage": "https://github.com/adam-lowe/11-Fitness-Tracker#readme"
+}

@@ -3,21 +3,18 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (workout.js) to use its database functions.
-var workout = require("../workout.json");
+var Workout = require("../workout.json");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  workout.all(function(data) {
-    var hbsObject = {
-      workouts: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
-});
 
 router.post("/api/workouts", function(req, res) {
-
+  Workout.create(body)
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
 
 router.put("/api/workouts/:id", function(req, res) {

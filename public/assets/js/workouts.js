@@ -1,3 +1,15 @@
+const table = $('#workTable')
+
+table.append(`
+<tr>
+<td>do</td>
+<td>re</td>
+<td>me</td>
+</tr>
+`);
+
+
+
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-sleep").on("click", function(event) {

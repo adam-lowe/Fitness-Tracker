@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (workout.js) to use its database functions.
-var Workout = require("../workout.json");
+var Workout = require("../models/workouts.json");
 
 // Create all our routes and set up logic within those routes where required.
 

@@ -1,7 +1,6 @@
 var express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const Workout = require("./models/workouts.json")
 
 var PORT = process.env.PORT || 3000;
 

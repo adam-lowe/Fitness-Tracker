@@ -1,4 +1,7 @@
 var express = require("express");
+const logger = require("morgan");
+const mongoose = require("mongoose");
+const Workout = require("./models/workouts.json")
 
 var PORT = process.env.PORT || 3000;
 
@@ -7,10 +10,13 @@ var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(logger("dev"));
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 

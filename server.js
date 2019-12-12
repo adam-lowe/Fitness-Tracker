@@ -27,10 +27,6 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controllers/workoutController.js");
 
-db.on("error", error => {
-  console.log("Database Error:", error);
-});
-
 app.use(routes);
 
 app.listen(PORT, function() {

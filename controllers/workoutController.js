@@ -1,10 +1,6 @@
 var express = require("express");
 const Plan = require("../models/schema");
 
-db.on("error", error => {
-  console.log("Database Error:", error);
-});
-
 var router = express.Router();
 
 // Import the model (workout.js) to use its database functions.

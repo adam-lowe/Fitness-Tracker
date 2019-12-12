@@ -1,4 +1,8 @@
-const table = $('#workTable')
+const table = $('#workTable');
+const modalBtn = $('#modalBtn');
+const submit = $('#submit');
+
+getResults();
 
 table.append(`
 <tr>
@@ -8,7 +12,26 @@ table.append(`
 </tr>
 `);
 
+function getResults() {
+  table.val('');
+  fetch("/api/workouts")
+      .then(function(response) {
+          if (response.status !== 200) {
+              console.log("Looks like there was a problem. Status Code: " + response.status);
+              return;
+          }
+          response.json().then(function(data) {
+              console.log(data)
+          });
+      })
+      .catch(function(err) {
+          console.log("Fetch Error :-S", err);
+      });
+}
 
+submit.on(events, function () {
+  
+});
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {

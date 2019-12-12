@@ -6,13 +6,6 @@ const workoutReps = $('#workoutReps')
 
 getResults();
 
-table.append(`
-<tr>
-<td>do</td>
-<td>re</td>
-</tr>
-`);
-
 function getResults() {
   table.val('');
   fetch("/api/workouts")
@@ -26,7 +19,7 @@ function getResults() {
               table.append(`
               <tr>
               <td>${work.fit}</td>
-              <td>${work.rep}</td>
+              <td>${work.reps}</td>
               </tr>
               `);
             });

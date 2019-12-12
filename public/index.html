@@ -16,7 +16,8 @@
           <table class="table">
               <thead>
                   <tr>
-                      <th>Add to Workout</th>
+                      <th>Workout</th>
+                      <th>Reps</th>
                   </tr>
               </thead>
               <tbody id="workTable">
@@ -33,10 +34,13 @@
                   <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
-                  <p>Some text in the modal.</p>
+                  <p>Exsercize</p>
+                  <input type="text" id="newFit">
+                  <p>Reps</p>
+                  <input type="number" name="reps" id="workoutReps">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" id="submit">Submit</button>
+                  <button type="button" class="btn btn-default" id="submit" data-dismiss="modal">Submit</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
               </div>

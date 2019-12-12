@@ -1,8 +1,8 @@
 const table = $('#workTable');
 const modalBtn = $('#modalBtn');
 const submit = $('#submit');
-const newFit = $('#newFit')
-const workoutReps = $('#workoutReps')
+const newFit = $('#newFit');
+const workoutReps = $('#workoutReps');
 
 getResults();
 

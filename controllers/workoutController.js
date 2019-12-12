@@ -1,6 +1,5 @@
 var express = require("express");
-const databaseUrl = "workoutList";
-const collections = ["workouts"];
+const Plan = require("../models")
 const mongoose = require("mongoose");
 const mongojs = require("mongojs");
 const db = mongojs(databaseUrl, collections);
@@ -18,7 +17,7 @@ var router = express.Router();
 router.get("/api/workouts", function(req, res) {
   console.log(req.body);
 
-  db.workouts.find({}, (error, data) => {
+  Plan.find({}, (error, data) => {
     if (error) {
       res.send(error);
     } else {
@@ -27,16 +26,14 @@ router.get("/api/workouts", function(req, res) {
   });
 });
 
-router.post("/api/workouts", function(req, res) {
-  console.log(req.body);
-
-  db.workouts.insert(req.body, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.send(data);
-    }
-  });
+router.post("/api/workouts", function({ body }, res) {
+  Plan.create(body)
+    .then(dbPlan => {
+      res.json(dbPlan);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
 
 router.put("/api/workouts/:id", function(req, res) {

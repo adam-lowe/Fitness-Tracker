@@ -10,7 +10,7 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb" 
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb";
 
 mongoose.connect(MONGODB_URI);
 

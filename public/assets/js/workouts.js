@@ -22,7 +22,14 @@ function getResults() {
               return;
           }
           response.json().then(function(data) {
-              console.log(data);
+            data.forEach(work => {
+              table.append(`
+              <tr>
+              <td>${work.fit}</td>
+              <td>${work.rep}</td>
+              </tr>
+              `);
+            });
           });
       })
       .catch(function(err) {

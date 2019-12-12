@@ -11,7 +11,7 @@ var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));

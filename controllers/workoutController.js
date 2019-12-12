@@ -1,8 +1,5 @@
 var express = require("express");
-const Plan = require("../models")
-const mongoose = require("mongoose");
-const mongojs = require("mongojs");
-const db = mongojs(databaseUrl, collections);
+const Plan = require("../models/schema");
 
 db.on("error", error => {
   console.log("Database Error:", error);

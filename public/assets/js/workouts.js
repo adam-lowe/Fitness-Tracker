@@ -48,6 +48,7 @@ $(function() {
   })
   .then(function(response) {
     console.log(response)
+      location.reload();
       return response.json();
   })
   });

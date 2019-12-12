@@ -20,20 +20,33 @@
                   </tr>
               </thead>
               <tbody id="workTable">
-                  <tr>
-                      <td>do</td>
-                      <td>re</td>
-                      <td>me</td>
-                  </tr>
-                  <tr>
-                    <td>dor</td>
-                    <td>rer</td>
-                    <td>mer</td>
-                  </tr>
+
               </tbody>
           </table>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" id="submit">Submit</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
           <button class="btn">
-                  Or... <span class="badge badge-primary">Make New Workout</span>
+                  Or... <span id="modal" class="badge badge-primary" data-toggle="modal" data-target="#myModal">Make New Workout</span>
           </button>
       </div>
     <!-- Optional JavaScript -->
